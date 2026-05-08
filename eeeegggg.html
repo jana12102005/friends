@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Display Gallery</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f4f4;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .image-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-card:hover {
+      transform: scale(1.03);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .caption {
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .image-card img {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Image Gallery</h1>
+
+  <div class="gallery">
+
+    <div class="image-card">
+      <img src="sumi.jpeg" alt="Image 1">
+      <div class="caption">Image 1</div>
+    </div>
+
+    <div class="image-card">
+      <img src="image2.jpg" alt="Image 2">
+      <div class="caption">Image 2</div>
+    </div>
+
+    <div class="image-card">
+      <img src="image3.jpg" alt="Image 3">
+      <div class="caption">Image 3</div>
+    </div>
+
+    <div class="image-card">
+      <img src="image4.jpg" alt="Image 4">
+      <div class="caption">Image 4</div>
+    </div>
+
+    <div class="image-card">
+      <img src="image5.jpg" alt="Image 5">
+      <div class="caption">Image 5</div>
+    </div>
+
+    <div class="image-card">
+      <img src="image6.jpg" alt="Image 6">
+      <div class="caption">Image 6</div>
+    </div>
+
+  </div>
+
+</body>
+</html>
